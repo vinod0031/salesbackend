@@ -11,10 +11,7 @@ app.use(express.json());
 
 
 const MONGODB_URI = 'mongodb://localhost:27017';//setup MongoDB your device 
-mongoose.connect(MONGODB_URI, {
-useNewUrlParser: true,
-useUnifiedTopology: true
-})
+mongoose.connect(MONGODB_URI)
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.error(err));
 
