@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const MONGODB_URI = 'mongodb://localhost:27017';//setup MongoDB your device 
+const MONGODB_URI = process.env.MONGODB_URI;;//setup MongoDB your device 
 mongoose.connect(MONGODB_URI)
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.error(err));
